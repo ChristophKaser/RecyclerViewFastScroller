@@ -1,8 +1,9 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion rootProject.ext.compileSdkVersion as Integer
-    buildToolsVersion rootProject.ext.buildToolsVersion as String
+    namespace = "xyz.danoz.recyclerview.sample"
+
+    compileSdk rootProject.ext.compileSdkVersion as Integer
 
     defaultConfig {
         applicationId "xyz.danoz.recyclerviewfastscroller.sample"
@@ -23,7 +24,8 @@ android {
 }
 
 dependencies {
-    compile group: rootProject.ext.androidSupportGroup, name: 'support-v4', version: rootProject.ext.supportLibsVersion
-    compile group: rootProject.ext.androidSupportGroup, name: 'recyclerview-v7', version: rootProject.ext.supportLibsVersion
-    compile project(':recyclerviewfastscroller')
+    implementation group: rootProject.ext.androidSupportGroup, name: 'support-v4', version: rootProject.ext.supportLibsVersion
+    implementation group: rootProject.ext.androidSupportGroup, name: 'appcompat-v7', version: rootProject.ext.supportLibsVersion
+    implementation group: rootProject.ext.androidSupportGroup, name: 'recyclerview-v7', version: rootProject.ext.supportLibsVersion
+    implementation project(':recyclerviewfastscroller')
 }

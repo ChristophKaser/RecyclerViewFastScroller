@@ -1,27 +1,21 @@
 buildscript {
     repositories {
-        jcenter()
+        google()
         mavenCentral()
-    }
-    dependencies {
-        classpath "org.jfrog.buildinfo:build-info-extractor-gradle:4.0.0"
     }
 }
 
 apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'maven-publish'
-apply plugin: "com.jfrog.artifactory"
 
 android {
-    compileSdkVersion rootProject.ext.compileSdkVersion as Integer
-    buildToolsVersion rootProject.ext.buildToolsVersion as String
+    namespace = "xyz.danoz.recyclerviewfastscroller"
+
+    compileSdk rootProject.ext.compileSdkVersion as Integer
 
     defaultConfig {
         minSdkVersion rootProject.ext.minSdkVersion as Integer
         targetSdkVersion rootProject.ext.targetSdkVersion as Integer
-        versionCode rootProject.ext.versionCode as Integer
-        versionName rootProject.ext.versionName as String
     }
 
     compileOptions {
@@ -35,9 +29,9 @@ android {
 }
 
 dependencies {
-    compile group: rootProject.ext.androidSupportGroup, name: 'support-v4', version: rootProject.ext.supportLibsVersion
-    compile group: rootProject.ext.androidSupportGroup, name: 'appcompat-v7', version: rootProject.ext.supportLibsVersion
-    compile group: rootProject.ext.androidSupportGroup, name: 'recyclerview-v7', version: rootProject.ext.supportLibsVersion
+    implementation group: rootProject.ext.androidSupportGroup, name: 'support-v4', version: rootProject.ext.supportLibsVersion
+    implementation group: rootProject.ext.androidSupportGroup, name: 'appcompat-v7', version: rootProject.ext.supportLibsVersion
+    implementation group: rootProject.ext.androidSupportGroup, name: 'recyclerview-v7', version: rootProject.ext.supportLibsVersion
 }
 
 // Variables for Artifactory publishing are stored in local gradle.properties
