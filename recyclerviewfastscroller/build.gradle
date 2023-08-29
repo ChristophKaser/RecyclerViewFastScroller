@@ -26,6 +26,11 @@ android {
     lintOptions {
         abortOnError false
     }
+    publishing {
+        singleVariant('release') {
+            withSourcesJar()
+        }
+    }
 }
 
 dependencies {
@@ -34,33 +39,16 @@ dependencies {
     implementation group: 'androidx.recyclerview', name: 'recyclerview', version: rootProject.ext.recyclerViewVersion
 }
 
-// Variables for Artifactory publishing are stored in local gradle.properties
-//artifactory {
-//    contextUrl = "${artifactory_contextUrl}"
-//    publish {
-//        repository {
-//            repoKey = "${artifactory_repokey}"
-//            username = "${artifactory_user}"
-//            password = "${artifactory_password}"
-//            maven = true
-//        }
-//        defaults {
-//            publications ('recyclerviewfastscroller')
-//        }
-//    }
-//}
-//
-//publishing {
-//    publications {
-//        recyclerviewfastscroller(MavenPublication) {
-//            groupId 'com.brightcove'
-//            artifactId 'recyclerviewfastscroller'
-//            version rootProject.ext.versionName as String
-//            artifact("$buildDir/outputs/aar/recyclerviewfastscroller-release.aar")
-//        }
-//    }
-//}
-//
-//artifactoryPublish {
-//    dependsOn assemble
-//}
+publishing {
+    publications {
+        release(MavenPublication) {
+            groupId = 'xyz.danoz'
+            artifactId = 'recyclerviewfastscroller'
+            version = '0.1.5-androidx'
+
+            afterEvaluate {
+                from components.release
+            }
+        }
+    }
+}
