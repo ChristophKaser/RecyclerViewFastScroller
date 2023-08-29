@@ -1,6 +1,6 @@
 package xyz.danoz.recyclerviewfastscroller.sectionindicator;
 
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.widget.SectionIndexer;
 
 /**

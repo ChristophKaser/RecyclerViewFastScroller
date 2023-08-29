@@ -1,6 +1,6 @@
 package xyz.danoz.recyclerviewfastscroller.sample.data;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 /**
  * Allow for finding a color group based on a hue

@@ -19,8 +19,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_7
-        targetCompatibility JavaVersion.VERSION_1_7
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 
     lintOptions {
@@ -29,9 +29,9 @@ android {
 }
 
 dependencies {
-    implementation group: rootProject.ext.androidSupportGroup, name: 'support-v4', version: rootProject.ext.supportLibsVersion
-    implementation group: rootProject.ext.androidSupportGroup, name: 'appcompat-v7', version: rootProject.ext.supportLibsVersion
-    implementation group: rootProject.ext.androidSupportGroup, name: 'recyclerview-v7', version: rootProject.ext.supportLibsVersion
+    implementation group: 'androidx.legacy', name: 'legacy-support-v4', version: '1.0.0'
+    implementation group: 'androidx.appcompat', name: 'appcompat', version: rootProject.ext.appcompatVersion
+    implementation group: 'androidx.recyclerview', name: 'recyclerview', version: rootProject.ext.recyclerViewVersion
 }
 
 // Variables for Artifactory publishing are stored in local gradle.properties

@@ -1,6 +1,6 @@
 package xyz.danoz.recyclerviewfastscroller.sample.data;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 /**
  * Data object representing a color

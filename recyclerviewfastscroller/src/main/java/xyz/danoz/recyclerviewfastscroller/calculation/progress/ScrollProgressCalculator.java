@@ -1,6 +1,6 @@
 package xyz.danoz.recyclerviewfastscroller.calculation.progress;
 
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * Assists in calculating the amount of scroll progress for a {@link RecyclerView}

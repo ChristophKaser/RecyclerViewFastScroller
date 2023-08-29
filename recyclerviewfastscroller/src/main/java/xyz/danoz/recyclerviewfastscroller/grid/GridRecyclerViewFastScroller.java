@@ -1,9 +1,9 @@
 package xyz.danoz.recyclerviewfastscroller.grid;
 
 import android.content.Context;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.util.AttributeSet;
 
 import xyz.danoz.recyclerviewfastscroller.AbsRecyclerViewFastScroller;
@@ -13,7 +13,6 @@ import xyz.danoz.recyclerviewfastscroller.calculation.VerticalScrollBoundsProvid
 import xyz.danoz.recyclerviewfastscroller.calculation.position.VerticalScreenPositionCalculator;
 import xyz.danoz.recyclerviewfastscroller.calculation.progress.GridLayoutManagerScrollProgressCalculator;
 import xyz.danoz.recyclerviewfastscroller.calculation.progress.TouchableScrollProgressCalculator;
-import xyz.danoz.recyclerviewfastscroller.calculation.progress.VerticalLinearLayoutManagerScrollProgressCalculator;
 import xyz.danoz.recyclerviewfastscroller.calculation.progress.VerticalScrollProgressCalculator;
 
 /**

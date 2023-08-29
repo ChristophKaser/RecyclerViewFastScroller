@@ -1,7 +1,7 @@
 package xyz.danoz.recyclerviewfastscroller;
 
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.RecyclerView.OnScrollListener;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView.OnScrollListener;
 
 /**
  * To be implemented by any object that scrolls a {@link RecyclerView}
